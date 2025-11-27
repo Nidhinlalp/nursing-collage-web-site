@@ -1,0 +1,1240 @@
+{
+  "project": {
+    "name": "IETNC Nursing College Website 2025 Rebuild",
+    "client": "ITHIS Medicity Nursing College",
+    "existingWebsite": "https://www.ietnc.com",
+    "designPhilosophy": "Gen Z-Focused, Mobile-First, Motion-Heavy",
+    "technology": {
+      "framework": "Next.js 14+",
+      "language": "TypeScript",
+      "styling": "Tailwind CSS",
+      "animations": "Framer Motion",
+      "forms": "React Hook Form + Zod",
+      "icons": ["Lucide React", "React Icons"]
+    }
+  },
+  "designSystem": {
+    "colors": {
+      "primary": {
+        "blue": "#2563EB",
+        "teal": "#14B8A6"
+      },
+      "semantic": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444"
+      },
+      "backgrounds": {
+        "light": "#F9FAFB",
+        "dark": "#0F172A",
+        "cardLight": "#FFFFFF",
+        "cardDark": "#1E293B"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "headings": "Inter",
+        "body": "Inter",
+        "mono": "Fira Code"
+      },
+      "sizes": {
+        "h1": "48px",
+        "h2": "36px",
+        "h3": "28px",
+        "h4": "24px",
+        "bodyLarge": "18px",
+        "bodyRegular": "16px",
+        "bodySmall": "14px"
+      },
+      "weights": {
+        "bold": 700,
+        "semibold": 600,
+        "medium": 500,
+        "regular": 400
+      }
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "2xl": "48px",
+      "3xl": "64px",
+      "4xl": "96px"
+    },
+    "borderRadius": {
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "full": "9999px"
+    },
+    "shadows": {
+      "sm": "0 1px 2px rgba(0,0,0,0.05)",
+      "md": "0 4px 6px rgba(0,0,0,0.1)",
+      "lg": "0 10px 15px rgba(0,0,0,0.1)",
+      "xl": "0 20px 25px rgba(0,0,0,0.1)"
+    },
+    "breakpoints": {
+      "mobile": "320px",
+      "tablet": "768px",
+      "desktop": "1024px",
+      "large": "1440px"
+    },
+    "darkMode": {
+      "enabled": true,
+      "toggleLocation": "header",
+      "transitionDuration": "300ms"
+    }
+  },
+  "pages": [
+    {
+      "id": 1,
+      "name": "Homepage",
+      "slug": "/",
+      "priority": "CRITICAL",
+      "devTime": "5-7 days",
+      "sections": [
+        {
+          "name": "Hero Section",
+          "type": "hero",
+          "height": "100vh",
+          "content": {
+            "headline": "Shape Your Future in Nursing Excellence",
+            "subheadline": "INC Recognized | KHSU Affiliated | 100% Placements",
+            "ctas": [
+              {
+                "text": "Start Your Journey",
+                "type": "primary",
+                "action": "navigate",
+                "target": "/admissions"
+              },
+              {
+                "text": "Explore Programs",
+                "type": "secondary",
+                "action": "scroll",
+                "target": "#programs"
+              }
+            ]
+          },
+          "background": {
+            "type": "image-overlay",
+            "overlay": "0.4",
+            "parallax": true
+          },
+          "animations": [
+            {
+              "type": "fade-in",
+              "duration": "0.6s",
+              "delay": "0s",
+              "easing": "ease-out"
+            },
+            {
+              "type": "slide-up",
+              "duration": "0.6s",
+              "delay": "0.2s",
+              "easing": "ease-out"
+            },
+            {
+              "type": "pulse",
+              "target": "buttons",
+              "duration": "2s",
+              "infinite": true
+            }
+          ]
+        },
+        {
+          "name": "Statistics Section",
+          "type": "stats-grid",
+          "layout": {
+            "mobile": "2 columns",
+            "tablet": "2 columns",
+            "desktop": "4 columns"
+          },
+          "stats": [
+            {
+              "number": 500,
+              "unit": "+",
+              "label": "Students",
+              "icon": "users"
+            },
+            {
+              "number": 50,
+              "unit": "+",
+              "label": "Faculty",
+              "icon": "award"
+            },
+            {
+              "number": 100,
+              "unit": "%",
+              "label": "Placements",
+              "icon": "trending-up"
+            },
+            {
+              "number": 10,
+              "unit": "+",
+              "label": "Hospital Partners",
+              "icon": "hospital"
+            }
+          ],
+          "animations": [
+            {
+              "type": "count-up",
+              "target": "numbers",
+              "duration": "2s",
+              "trigger": "on-scroll"
+            },
+            {
+              "type": "scale-entrance",
+              "target": "cards",
+              "duration": "0.6s",
+              "stagger": "0.1s"
+            },
+            {
+              "type": "bounce-entrance",
+              "target": "icons",
+              "duration": "0.6s"
+            }
+          ]
+        },
+        {
+          "name": "Programs Carousel",
+          "type": "carousel",
+          "layout": {
+            "mobile": "vertical-scroll",
+            "desktop": "3-columns"
+          },
+          "items": 3,
+          "autoPlay": false,
+          "touchSwipe": true,
+          "cards": [
+            {
+              "title": "GNM",
+              "fullName": "General Nursing & Midwifery",
+              "duration": "3 Years",
+              "seats": "50+",
+              "features": [
+                "Foundational Nursing",
+                "Midwifery Focus",
+                "Community Health"
+              ]
+            },
+            {
+              "title": "BSc Nursing",
+              "fullName": "Bachelor of Science in Nursing",
+              "duration": "4 Years",
+              "seats": "40+",
+              "features": [
+                "Advanced Nursing",
+                "Research Focus",
+                "Specializations"
+              ]
+            }
+          ],
+          "animations": [
+            {
+              "type": "rotate-entrance",
+              "target": "cards",
+              "rotation": "15deg",
+              "duration": "0.6s"
+            },
+            {
+              "type": "card-hover-lift",
+              "translateY": "-4px",
+              "duration": "0.3s",
+              "shadowIncrease": true
+            }
+          ]
+        },
+        {
+          "name": "Why Choose Us",
+          "type": "features-grid",
+          "layout": {
+            "mobile": "2 columns",
+            "tablet": "2 columns",
+            "desktop": "4 columns"
+          },
+          "count": 8,
+          "features": [
+            {
+              "title": "INC Recognition",
+              "description": "Recognized by Indian Nursing Council",
+              "icon": "check-circle"
+            },
+            {
+              "title": "Expert Faculty",
+              "description": "50+ qualified professionals",
+              "icon": "users"
+            },
+            {
+              "title": "Modern Labs",
+              "description": "Advanced simulation facilities",
+              "icon": "beaker"
+            },
+            {
+              "title": "Hospital Network",
+              "description": "10+ partner hospitals",
+              "icon": "hospital"
+            },
+            {
+              "title": "100% Placements",
+              "description": "Competitive packages",
+              "icon": "trending-up"
+            },
+            {
+              "title": "Scholarships",
+              "description": "Financial aid available",
+              "icon": "award"
+            },
+            {
+              "title": "24/7 Facilities",
+              "description": "Round-the-clock support",
+              "icon": "clock"
+            },
+            {
+              "title": "Global Standards",
+              "description": "International education",
+              "icon": "globe"
+            }
+          ],
+          "animations": [
+            {
+              "type": "icon-bounce",
+              "duration": "0.6s",
+              "stagger": "0.1s"
+            },
+            {
+              "type": "text-reveal",
+              "duration": "0.5s",
+              "stagger": "0.05s"
+            },
+            {
+              "type": "gradient-shift",
+              "target": "cards",
+              "duration": "0.3s",
+              "trigger": "on-hover"
+            }
+          ]
+        },
+        {
+          "name": "Faculty Carousel",
+          "type": "carousel",
+          "itemsVisible": 3,
+          "autoPlay": true,
+          "autoPlayInterval": "5s",
+          "items": 5,
+          "animations": [
+            {
+              "type": "fade-slide",
+              "duration": "0.6s"
+            }
+          ]
+        },
+        {
+          "name": "Testimonials",
+          "type": "carousel",
+          "itemsVisible": 1,
+          "autoPlay": true,
+          "autoPlayInterval": "6s",
+          "count": 5,
+          "animations": [
+            {
+              "type": "slide-transition",
+              "duration": "0.6s"
+            },
+            {
+              "type": "parallax-photos",
+              "intensity": "medium"
+            }
+          ]
+        },
+        {
+          "name": "News Ticker",
+          "type": "ticker",
+          "count": 4,
+          "autoScroll": true,
+          "animations": [
+            {
+              "type": "continuous-slide",
+              "duration": "0.5s"
+            }
+          ]
+        },
+        {
+          "name": "Admission CTA",
+          "type": "banner",
+          "width": "100%",
+          "background": "gradient",
+          "gradientFrom": "blue",
+          "gradientTo": "teal",
+          "content": "Limited Seats Available - Apply Now",
+          "deadline": "visible",
+          "animations": [
+            {
+              "type": "gradient-animation",
+              "duration": "3s",
+              "infinite": true
+            },
+            {
+              "type": "pulse-badge",
+              "target": "deadline",
+              "color": "red",
+              "duration": "1s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "About Us",
+      "slug": "/about",
+      "priority": "HIGH",
+      "devTime": "3-4 days",
+      "sections": [
+        {
+          "name": "Hero Image",
+          "type": "hero-image",
+          "height": "400px"
+        },
+        {
+          "name": "Mission & Vision",
+          "type": "cards",
+          "count": 2,
+          "layout": "side-by-side"
+        },
+        {
+          "name": "Leadership",
+          "type": "profile-grid",
+          "count": 5,
+          "layout": {
+            "mobile": "1 column",
+            "tablet": "2 columns",
+            "desktop": "3 columns"
+          }
+        },
+        {
+          "name": "Recognition",
+          "type": "logo-grid",
+          "count": 6
+        },
+        {
+          "name": "Timeline",
+          "type": "timeline",
+          "orientation": "vertical",
+          "items": 8
+        },
+        {
+          "name": "Success Stories",
+          "type": "carousel",
+          "count": 4,
+          "autoPlay": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Admissions",
+      "slug": "/admissions",
+      "priority": "CRITICAL",
+      "devTime": "5-7 days",
+      "sections": [
+        {
+          "name": "Program Cards",
+          "type": "program-cards",
+          "count": 2,
+          "layout": {
+            "mobile": "stacked",
+            "desktop": "2-column"
+          },
+          "fields": [
+            "programName",
+            "duration",
+            "seats",
+            "features",
+            "feeRange",
+            "ctaButton"
+          ]
+        },
+        {
+          "name": "Eligibility",
+          "type": "accordion",
+          "items": 6
+        },
+        {
+          "name": "Fee Structure",
+          "type": "table",
+          "layout": {
+            "mobile": "vertical-cards",
+            "desktop": "horizontal-table"
+          },
+          "rows": [
+            "Tuition Fees",
+            "Hostel Charges",
+            "Lab Fees",
+            "Library Fees",
+            "Miscellaneous",
+            "Total"
+          ]
+        },
+        {
+          "name": "Scholarships",
+          "type": "cards-grid",
+          "count": 4,
+          "layout": {
+            "mobile": "1 column",
+            "desktop": "2-3 columns"
+          }
+        },
+        {
+          "name": "Application Form",
+          "type": "form",
+          "layout": {
+            "mobile": "1-column",
+            "desktop": "2-column"
+          },
+          "sections": [
+            {
+              "name": "Personal Information",
+              "fields": [
+                "fullName",
+                "email",
+                "phone",
+                "dateOfBirth"
+              ]
+            },
+            {
+              "name": "Educational Qualifications",
+              "fields": [
+                "tenthMarks",
+                "twelfthMarks",
+                "stream"
+              ]
+            },
+            {
+              "name": "Program Selection",
+              "fields": [
+                "programDropdown"
+              ]
+            },
+            {
+              "name": "Address",
+              "fields": [
+                "address",
+                "city",
+                "state",
+                "pincode"
+              ]
+            },
+            {
+              "name": "Emergency Contact",
+              "fields": [
+                "contactName",
+                "contactPhone"
+              ]
+            },
+            {
+              "name": "Document Uploads",
+              "fields": [
+                "photoUpload",
+                "certificateUpload",
+                "idProofUpload"
+              ]
+            }
+          ],
+          "validation": {
+            "required": ["fullName", "email", "phone"],
+            "email": ["email"],
+            "phone": ["phone"],
+            "fileSize": "5MB max"
+          },
+          "animations": [
+            {
+              "type": "floating-label",
+              "duration": "0.3s"
+            },
+            {
+              "type": "input-glow",
+              "color": "teal",
+              "duration": "0.3s",
+              "trigger": "focus"
+            },
+            {
+              "type": "error-slide",
+              "duration": "0.4s",
+              "color": "red"
+            },
+            {
+              "type": "success-bounce",
+              "duration": "0.6s",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "name": "Important Dates",
+          "type": "timeline",
+          "orientation": {
+            "mobile": "vertical",
+            "desktop": "horizontal"
+          },
+          "items": 6,
+          "animations": [
+            {
+              "type": "line-draw",
+              "duration": "1s"
+            },
+            {
+              "type": "node-scale",
+              "duration": "0.6s",
+              "stagger": "0.1s"
+            }
+          ]
+        },
+        {
+          "name": "FAQ",
+          "type": "accordion",
+          "count": 20,
+          "searchable": true,
+          "filterable": true,
+          "categories": [
+            "Eligibility",
+            "Application Process",
+            "Fees & Scholarships",
+            "Hostel Information",
+            "Document Requirements"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Facilities",
+      "slug": "/facilities",
+      "priority": "HIGH",
+      "devTime": "4-5 days",
+      "sections": [
+        {
+          "name": "Facility Categories",
+          "type": "tabs",
+          "categories": [
+            "Academic",
+            "Accommodation",
+            "Clinical",
+            "Support Services",
+            "Sports & Recreation",
+            "Transport",
+            "Technology"
+          ]
+        },
+        {
+          "name": "Facility Cards",
+          "type": "cards-grid",
+          "layout": {
+            "mobile": "1 column",
+            "tablet": "2 columns",
+            "desktop": "3 columns"
+          }
+        },
+        {
+          "name": "Photo Galleries",
+          "type": "carousel-gallery",
+          "layout": {
+            "mobile": "horizontal-scroll",
+            "desktop": "grid"
+          },
+          "images": 50,
+          "lightbox": true
+        },
+        {
+          "name": "Hospital Partnerships",
+          "type": "logo-grid",
+          "count": 10,
+          "layout": {
+            "mobile": "3 per row",
+            "desktop": "6 per row"
+          }
+        },
+        {
+          "name": "Hostel Details",
+          "type": "tabs",
+          "roomTypes": [
+            "Single Room",
+            "Double Room",
+            "Triple Room"
+          ]
+        },
+        {
+          "name": "Statistics",
+          "type": "stat-cards",
+          "count": 8,
+          "animations": [
+            {
+              "type": "count-up",
+              "duration": "2s",
+              "trigger": "on-scroll"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "News & Events",
+      "slug": "/news-events",
+      "priority": "MEDIUM",
+      "devTime": "3-4 days",
+      "sections": [
+        {
+          "name": "Search & Filter",
+          "type": "search-filter",
+          "filters": [
+            "Category",
+            "Date Range",
+            "Featured",
+            "Recent"
+          ]
+        },
+        {
+          "name": "News Grid",
+          "type": "masonry-grid",
+          "layout": {
+            "mobile": "1 column",
+            "tablet": "2 columns",
+            "desktop": "3 columns"
+          },
+          "items": 20,
+          "featured": 1
+        },
+        {
+          "name": "Event Calendar",
+          "type": "calendar",
+          "layout": {
+            "mobile": "abbreviated",
+            "desktop": "full"
+          }
+        },
+        {
+          "name": "Photo Gallery",
+          "type": "masonry-gallery",
+          "images": 100,
+          "lightbox": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Faculty",
+      "slug": "/faculty",
+      "priority": "MEDIUM",
+      "devTime": "2-3 days",
+      "sections": [
+        {
+          "name": "Faculty Directory",
+          "type": "grid-with-search",
+          "searchable": true,
+          "filterable": true,
+          "layout": {
+            "mobile": "1 column",
+            "tablet": "2 columns",
+            "desktop": "3-4 columns"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Programs",
+      "slug": "/programs",
+      "priority": "HIGH",
+      "devTime": "4-5 days",
+      "sections": [
+        {
+          "name": "Program Tabs",
+          "type": "tabs",
+          "programs": [
+            "GNM",
+            "BSc Nursing"
+          ]
+        },
+        {
+          "name": "Program Overview",
+          "type": "content-section"
+        },
+        {
+          "name": "Curriculum",
+          "type": "accordion",
+          "years": 4
+        },
+        {
+          "name": "Career Prospects",
+          "type": "cards",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Campus Life",
+      "slug": "/campus-life",
+      "priority": "MEDIUM",
+      "devTime": "3-4 days",
+      "sections": [
+        {
+          "name": "Activities",
+          "type": "tabs-with-cards",
+          "categories": [
+            "Sports",
+            "Cultural",
+            "Academic",
+            "Social"
+          ]
+        },
+        {
+          "name": "Photo Gallery",
+          "type": "masonry-gallery",
+          "images": 80,
+          "lightbox": true
+        },
+        {
+          "name": "Video Gallery",
+          "type": "video-grid",
+          "videos": 8
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Placements",
+      "slug": "/placements",
+      "priority": "HIGH",
+      "devTime": "3-4 days",
+      "sections": [
+        {
+          "name": "Statistics Dashboard",
+          "type": "stat-cards",
+          "count": 6,
+          "animations": [
+            {
+              "type": "count-up",
+              "duration": "2s"
+            }
+          ]
+        },
+        {
+          "name": "Recruited Companies",
+          "type": "logo-grid",
+          "count": 12,
+          "layout": {
+            "mobile": "3 per row",
+            "desktop": "6 per row"
+          }
+        },
+        {
+          "name": "Placement Timeline",
+          "type": "timeline",
+          "items": 6
+        },
+        {
+          "name": "Success Stories",
+          "type": "carousel",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Contact Us",
+      "slug": "/contact",
+      "priority": "HIGH",
+      "devTime": "2-3 days",
+      "sections": [
+        {
+          "name": "Contact Information",
+          "type": "info-cards",
+          "count": 4,
+          "info": [
+            "address",
+            "phone",
+            "email",
+            "officeHours"
+          ]
+        },
+        {
+          "name": "Contact Form",
+          "type": "form",
+          "fields": [
+            "fullName",
+            "email",
+            "phone",
+            "subject",
+            "message"
+          ]
+        },
+        {
+          "name": "Google Maps",
+          "type": "map-embed",
+          "height": "400px",
+          "responsive": true
+        },
+        {
+          "name": "Campus Visit Booking",
+          "type": "form",
+          "fields": [
+            "visitorName",
+            "phone",
+            "preferredDate",
+            "preferredTime"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Policies",
+      "slug": "/policies",
+      "priority": "MEDIUM",
+      "devTime": "1-2 days",
+      "sections": [
+        {
+          "name": "Policies Navigation",
+          "type": "tabs-or-accordion"
+        },
+        {
+          "name": "Policy Content",
+          "type": "text-content",
+          "policies": [
+            "Admission Policy",
+            "Anti-Ragging Policy",
+            "Code of Conduct",
+            "Grievance Redressal",
+            "Terms of Use",
+            "Privacy Policy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Downloads",
+      "slug": "/downloads",
+      "priority": "MEDIUM",
+      "devTime": "1-2 days",
+      "sections": [
+        {
+          "name": "Download Categories",
+          "type": "tabs"
+        },
+        {
+          "name": "File Cards",
+          "type": "cards-grid",
+          "count": 15
+        }
+      ]
+    }
+  ],
+  "animations": {
+    "pageEntrance": [
+      {
+        "name": "fadeInSlideUp",
+        "duration": "0.6s",
+        "delay": "0s",
+        "easing": "ease-out",
+        "properties": {
+          "opacity": "0→1",
+          "transform": "translateY(20px)→(0)"
+        }
+      },
+      {
+        "name": "staggeredEntrance",
+        "duration": "0.5s",
+        "staggerDelay": "0.1s",
+        "easing": "ease-out"
+      },
+      {
+        "name": "parallaxScroll",
+        "duration": "continuous",
+        "easing": "linear",
+        "intensity": "medium"
+      }
+    ],
+    "scrollAnimations": [
+      {
+        "name": "fadeInOnScroll",
+        "trigger": "onScroll",
+        "duration": "0.6s",
+        "offset": "50% into viewport"
+      },
+      {
+        "name": "slideInFromLeft",
+        "trigger": "onScroll",
+        "duration": "0.7s",
+        "direction": "left"
+      },
+      {
+        "name": "countUpAnimation",
+        "trigger": "onScroll",
+        "duration": "2s",
+        "format": "number"
+      }
+    ],
+    "hoverStates": [
+      {
+        "element": "buttons",
+        "effects": [
+          "scale(1.05)",
+          "boxShadow increase",
+          "color shift"
+        ],
+        "duration": "0.3s"
+      },
+      {
+        "element": "links",
+        "effects": [
+          "underline from left",
+          "color change"
+        ],
+        "duration": "0.4s"
+      },
+      {
+        "element": "cards",
+        "effects": [
+          "translateY(-4px)",
+          "boxShadow increase"
+        ],
+        "duration": "0.3s"
+      },
+      {
+        "element": "images",
+        "effects": [
+          "scale(1.05)",
+          "overlay"
+        ],
+        "duration": "0.4s"
+      }
+    ],
+    "formAnimations": [
+      {
+        "name": "floatingLabel",
+        "trigger": "focus",
+        "duration": "0.3s"
+      },
+      {
+        "name": "inputGlow",
+        "trigger": "focus",
+        "duration": "0.3s",
+        "color": "teal"
+      },
+      {
+        "name": "errorMessage",
+        "animation": "slideDown + shake",
+        "duration": "0.4s",
+        "color": "red"
+      },
+      {
+        "name": "successMessage",
+        "animation": "springEntrance + bounce",
+        "duration": "0.6s",
+        "color": "green"
+      }
+    ],
+    "carouselAnimations": [
+      {
+        "name": "fadeSlideTransition",
+        "duration": "0.6s",
+        "autoPlayInterval": "5-6s"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "variants": ["primary", "secondary", "outline"],
+      "sizes": ["sm", "md", "lg"],
+      "states": ["default", "hover", "active", "disabled"],
+      "minHeight": "44px",
+      "minWidth": "44px"
+    },
+    {
+      "name": "Card",
+      "variants": ["elevated", "outlined", "filled"],
+      "hoverEffect": "lift",
+      "borderRadius": "12px"
+    },
+    {
+      "name": "Input",
+      "types": ["text", "email", "phone", "number", "date"],
+      "floatingLabel": true,
+      "validation": "real-time",
+      "minHeight": "48px"
+    },
+    {
+      "name": "Form",
+      "validation": "client + server",
+      "errorHandling": "per-field",
+      "successAnimation": true
+    },
+    {
+      "name": "Modal",
+      "entrance": "spring",
+      "exit": "smooth",
+      "overlay": "fadeInOut"
+    },
+    {
+      "name": "Carousel",
+      "touchSwipe": true,
+      "autoPlay": "optional",
+      "indicators": true
+    },
+    {
+      "name": "Accordion",
+      "animation": "smooth height change",
+      "singleOpen": true
+    }
+  ],
+  "performance": {
+    "targets": {
+      "pageLoadTime": "< 2 seconds",
+      "lighthouseScore": "> 95",
+      "animationFrameRate": "60fps",
+      "cls": "< 0.1",
+      "lcp": "< 2.5s"
+    },
+    "optimizations": [
+      "image-lazy-loading",
+      "code-splitting",
+      "minification",
+      "compression",
+      "cdn-distribution",
+      "caching-strategy"
+    ]
+  },
+  "seo": {
+    "metaTags": {
+      "homepage": {
+        "title": "IETNC - Nursing College in Kerala | INC Recognized",
+        "description": "ITHIS Medicity Nursing College - Best INC recognized nursing college with 100% placements, modern facilities, and expert faculty.",
+        "keywords": "nursing college, INC recognized, KHSU affiliated, nursing courses"
+      }
+    },
+    "schemaMarkup": [
+      "Organization",
+      "Course",
+      "EducationalOrganization",
+      "FAQPage"
+    ],
+    "sitemap": true,
+    "robotsTxt": true
+  },
+  "deployment": {
+    "platform": "Vercel",
+    "hosting": "Vercel Next.js optimized",
+    "database": "PostgreSQL (AWS RDS)",
+    "fileStorage": "AWS S3 or Cloudinary",
+    "email": "SendGrid",
+    "analytics": "Google Analytics 4",
+    "monitoring": "Sentry"
+  },
+  "timeline": {
+    "phase1": {
+      "name": "Planning & Design",
+      "weeks": 2,
+      "deliverables": [
+        "wireframes",
+        "mockups",
+        "design-system",
+        "database-schema"
+      ]
+    },
+    "phase2": {
+      "name": "Frontend & Backend Development",
+      "weeks": 4,
+      "parallel": true,
+      "deliverables": [
+        "all-pages",
+        "components",
+        "api-endpoints",
+        "database"
+      ]
+    },
+    "phase3": {
+      "name": "Integration & Testing",
+      "weeks": 3,
+      "deliverables": [
+        "integrated-system",
+        "test-report",
+        "bug-fixes"
+      ]
+    },
+    "phase4": {
+      "name": "SEO & Optimization",
+      "weeks": 2,
+      "deliverables": [
+        "seo-optimization",
+        "performance-tuning",
+        "security-audit"
+      ]
+    },
+    "phase5": {
+      "name": "QA & Launch",
+      "weeks": 2,
+      "deliverables": [
+        "launch-ready-system",
+        "documentation",
+        "monitoring-setup"
+      ]
+    },
+    "totalDuration": "12-13 weeks"
+  },
+  "team": {
+    "projectManager": 1,
+    "fullStackDeveloper": 1,
+    "frontEndDeveloper": 1,
+    "designer": 1,
+    "qaEngineer": 1,
+    "partTime": {
+      "seoSpecialist": 1,
+      "contentManager": 1,
+      "photographer": 1
+    }
+  },
+  "successCriteria": {
+    "technical": {
+      "pageLoadTime": "< 2 seconds",
+      "lighthouseScore": "95+",
+      "mobileResponsive": "100%",
+      "accessibility": "WCAG 2.1 AA",
+      "uptime": "99.9%"
+    },
+    "business": {
+      "organicTraffic": "+50% (6 months)",
+      "applicationConversion": "5%+",
+      "inquiryConversion": "8%+",
+      "searchRankings": "30+ page-1 keywords"
+    },
+    "user": {
+      "satisfactionScore": "> 4/5",
+      "supportTickets": "reduced",
+      "bounceRate": "< 45%",
+      "repeatVisitors": "high"
+    }
+  }
+}
+
+Build the IETNC Nursing College website 2025 rebuild based on this JSON specification.
+
+Key Requirements:
+- All 12 pages (Homepage through Downloads)
+- 100+ smooth animations (60fps)
+- Mobile-first responsive design (320px - 1440px)
+- Gen Z-focused modern aesthetics
+- Dark mode support
+- Form validations with error handling
+- SEO optimization
+- Performance targets: <2s load, >95 Lighthouse
+- All content from existing website integrated
+
+Use Next.js 14+, TypeScript, Tailwind CSS, Framer Motion
+Framework: Loveble
+Target: Production-ready website"
