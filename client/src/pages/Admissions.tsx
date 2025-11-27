@@ -38,45 +38,46 @@ import { useToast } from '@/hooks/use-toast';
 
 const eligibilityItems = [
   {
-    question: 'What are the age requirements?',
-    answer: 'Candidates must be between 17-35 years of age as on December 31st of the admission year.',
+    question: 'Educational Qualifications',
+    answer: 'Passed Higher Secondary Examination (HSC) from Kerala Board or equivalent with Physics, Chemistry, and Biology. Minimum 50% aggregate marks in PCB (Pass mark for SC/ST).',
   },
   {
-    question: 'What educational qualifications are needed for GNM?',
-    answer: '10+2 or equivalent with Science (Physics, Chemistry, Biology) with minimum 40% aggregate marks from a recognized board.',
+    question: 'Age Requirements',
+    answer: 'Minimum age: 17 years as on 31.12.2025. Maximum age: 35 years as on 31.12.2025.',
   },
   {
-    question: 'What educational qualifications are needed for BSc Nursing?',
-    answer: '10+2 or equivalent with Science (Physics, Chemistry, Biology) with minimum 45% aggregate marks. English is mandatory as one of the subjects.',
+    question: 'Medical Fitness',
+    answer: 'Candidates must be medically fit and produce a certificate from an authorized government medical officer. Vaccination certificate is also required.',
   },
   {
-    question: 'Are there any medical fitness requirements?',
-    answer: 'Yes, candidates must be medically fit. A medical fitness certificate from a registered medical practitioner is required at the time of admission.',
-  },
-  {
-    question: 'Is there an entrance examination?',
-    answer: 'Admission is based on merit in qualifying examination. Some seats may be filled through state-level entrance tests.',
-  },
-  {
-    question: 'What documents are required for admission?',
-    answer: 'Mark sheets and certificates of 10th & 12th, Transfer Certificate, Migration Certificate, Character Certificate, 6 passport size photographs, Aadhaar Card, Medical Fitness Certificate.',
+    question: 'Seat Distribution',
+    answer: '50% Government Merit (through government merit list) and 50% Management Quota (based on PCB marks).',
   },
 ];
 
 const feeStructure = [
-  { item: 'Tuition Fees (per year)', gnm: '₹55,000', bsc: '₹75,000' },
-  { item: 'Hostel Charges (per year)', gnm: '₹40,000', bsc: '₹40,000' },
-  { item: 'Lab Fees (one-time)', gnm: '₹10,000', bsc: '₹15,000' },
-  { item: 'Library Fees (per year)', gnm: '₹3,000', bsc: '₹5,000' },
-  { item: 'Uniform & Equipment', gnm: '₹8,000', bsc: '₹8,000' },
-  { item: 'Miscellaneous', gnm: '₹5,000', bsc: '₹5,000' },
+  { year: '1st Year', tuition: '₹73,025', special: '₹28,145', caution: '₹10,000', total: '₹111,170' },
+  { year: '2nd Year', tuition: '₹73,025', special: '₹24,280', caution: '-', total: '₹97,305' },
+  { year: '3rd Year', tuition: '₹73,025', special: '₹24,280', caution: '-', total: '₹97,305' },
+  { year: '4th Year', tuition: '₹73,025', special: '₹24,280', caution: '-', total: '₹97,305' },
 ];
 
-const scholarships = [
-  { name: 'Merit Scholarship', criteria: 'Top 10% in entrance/qualifying exam', benefit: 'Up to 50% tuition fee waiver', icon: Award },
-  { name: 'SC/ST Scholarship', criteria: 'Government scheme beneficiaries', benefit: 'Full tuition fee scholarship', icon: Users },
-  { name: 'Economic Assistance', criteria: 'Family income < ₹3 LPA', benefit: 'Up to 30% fee concession', icon: IndianRupee },
-  { name: 'Sports Quota', criteria: 'State/National level sportspersons', benefit: 'Up to 25% fee waiver', icon: Award },
+const admissionProcess = [
+  { step: 1, title: 'Application', desc: 'Apply online at www.ietnc.com. Fee: ₹1,200.' },
+  { step: 2, title: 'Selection', desc: 'Merit list published based on PCB marks.' },
+  { step: 3, title: 'Merit Discussion', desc: 'Interview and counseling session.' },
+  { step: 4, title: 'Verification', desc: 'Original documents and medical fitness check.' },
+  { step: 5, title: 'Admission', desc: 'Fee payment and admission confirmation.' },
+];
+
+const requiredDocuments = [
+  'SSLC & Plus Two Certificates',
+  'Transfer & Conduct Certificates',
+  'Medical Fitness & Vaccination Certificates',
+  'Migration & Equivalency Certificates (if applicable)',
+  'Caste & Nativity Certificates',
+  'Aadhaar Card',
+  '5 Passport & 3 Stamp size photos',
 ];
 
 export default function Admissions() {
@@ -145,77 +146,86 @@ export default function Admissions() {
 
   return (
     <main data-testid="page-admissions">
-      <section className="relative h-[300px] flex items-center justify-center bg-gradient-to-r from-primary to-accent">
-        <div className="relative z-10 text-center px-4">
-          <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">Admissions 2025-26</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" data-testid="text-admissions-title">
-            Join Our Nursing Family
+      <section className="relative py-20 flex items-center justify-center bg-gradient-to-r from-primary to-accent overflow-hidden">
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="relative z-10 text-center px-4 container mx-auto">
+          <div className="inline-block animate-bounce-in mb-6">
+            <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold shadow-lg border-2 border-white/20 flex items-center gap-2">
+              <Clock className="h-5 w-5" />
+              CRITICAL DEADLINE: 26/11/2025 at 4:00 PM
+            </div>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-admissions-title">
+            Admissions 2025-26
           </h1>
-          <p className="text-white/90 max-w-2xl mx-auto">
-            Applications are now open for GNM and BSc Nursing programs
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+            Shape your future with our B.Sc Nursing program.
+            <br />INC Recognized | KHSU Affiliated
           </p>
         </div>
       </section>
 
       <section className="py-12 md:py-16" data-testid="section-program-cards">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Choose Your Program</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="hover-elevate" data-testid="card-gnm-program">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-blue-700">
-                    <Stethoscope className="h-6 w-6 text-white" />
+          <div className="max-w-4xl mx-auto">
+            <Card className="hover-elevate border-primary/20 shadow-lg" data-testid="card-bsc-program">
+              <CardHeader className="pb-4 border-b bg-muted/30">
+                <div className="flex items-center gap-4">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-accent shadow-md">
+                    <GraduationCap className="h-8 w-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">GNM Program</h3>
-                    <p className="text-sm text-muted-foreground">General Nursing & Midwifery</p>
+                    <h3 className="text-2xl font-bold text-foreground">Bachelor of Science in Nursing (B.Sc Nursing)</h3>
+                    <p className="text-muted-foreground">Undergraduate Degree Program</p>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <Clock className="h-4 w-4 text-muted-foreground" /> Duration: 3 Years
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Users className="h-4 w-4 text-muted-foreground" /> Seats: 50+
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <FileText className="h-4 w-4 text-muted-foreground" /> Eligibility: 10+2 Science
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Badge variant="secondary">Fees: ₹55,000/year</Badge>
-              </CardFooter>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-bsc-program">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-accent to-teal-700">
-                    <GraduationCap className="h-6 w-6 text-white" />
+              <CardContent className="pt-6 grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Clock className="h-5 w-5 text-primary" />
+                    <div>
+                      <span className="font-semibold block">Duration</span>
+                      <span className="text-muted-foreground">4 Years (8 Semesters)</span>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold">BSc Nursing</h3>
-                    <p className="text-sm text-muted-foreground">Bachelor of Science in Nursing</p>
+                  <div className="flex items-center gap-3">
+                    <Users className="h-5 w-5 text-primary" />
+                    <div>
+                      <span className="font-semibold block">Annual Intake</span>
+                      <span className="text-muted-foreground">30 Students</span>
+                    </div>
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <Clock className="h-4 w-4 text-muted-foreground" /> Duration: 4 Years
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <Users className="h-4 w-4 text-muted-foreground" /> Seats: 40+
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <FileText className="h-4 w-4 text-muted-foreground" /> Eligibility: 10+2 Science (45%)
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Award className="h-5 w-5 text-primary" />
+                    <div>
+                      <span className="font-semibold block">Recognition</span>
+                      <span className="text-muted-foreground">INC & KNMC Approved</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FileText className="h-5 w-5 text-primary" />
+                    <div>
+                      <span className="font-semibold block">Affiliation</span>
+                      <span className="text-muted-foreground">KHSU, Thrissur</span>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
-              <CardFooter>
-                <Badge variant="secondary">Fees: ₹75,000/year</Badge>
+              <CardFooter className="bg-muted/30 border-t p-6">
+                <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4">
+                  <div className="flex gap-2">
+                    <Badge variant="secondary">Govt Merit: 50% Seats</Badge>
+                    <Badge variant="secondary">Mgmt Quota: 50% Seats</Badge>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-sm text-muted-foreground block">First Year Fees</span>
+                    <span className="text-2xl font-bold text-primary">₹1,11,170</span>
+                  </div>
+                </div>
               </CardFooter>
             </Card>
           </div>
@@ -249,53 +259,99 @@ export default function Admissions() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <Badge variant="secondary" className="mb-4">Fees</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Fee Structure</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Fee Structure 2025-26</h2>
+            <p className="text-muted-foreground">Detailed breakdown of academic fees per year</p>
           </div>
-          <Card className="max-w-3xl mx-auto overflow-hidden">
+          <Card className="max-w-4xl mx-auto overflow-hidden">
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Fee Component</TableHead>
-                  <TableHead className="text-center">GNM</TableHead>
-                  <TableHead className="text-center">BSc Nursing</TableHead>
+                  <TableHead>Year</TableHead>
+                  <TableHead className="text-right">Tuition Fee</TableHead>
+                  <TableHead className="text-right">Special Fee</TableHead>
+                  <TableHead className="text-right">Caution Deposit</TableHead>
+                  <TableHead className="text-right font-bold">Total</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {feeStructure.map((row, idx) => (
                   <TableRow key={idx} data-testid={`row-fee-${idx}`}>
-                    <TableCell className="font-medium">{row.item}</TableCell>
-                    <TableCell className="text-center">{row.gnm}</TableCell>
-                    <TableCell className="text-center">{row.bsc}</TableCell>
+                    <TableCell className="font-medium">{row.year}</TableCell>
+                    <TableCell className="text-right">{row.tuition}</TableCell>
+                    <TableCell className="text-right">{row.special}</TableCell>
+                    <TableCell className="text-right">{row.caution}</TableCell>
+                    <TableCell className="text-right font-bold">{row.total}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
+            <div className="p-4 bg-muted/50 text-sm text-muted-foreground">
+              <p>* Additional charges applicable for Uniform, Textbooks, Health Insurance, etc.</p>
+              <p>* Application Fee: ₹1,200 (Non-refundable)</p>
+            </div>
           </Card>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-muted/30" data-testid="section-scholarships">
+      <section className="py-12 md:py-16 bg-muted/30" data-testid="section-process-docs">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <Badge variant="secondary" className="mb-4">Financial Aid</Badge>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Scholarships Available</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {scholarships.map((scholarship, idx) => {
-              const Icon = scholarship.icon;
-              return (
-                <Card key={idx} className="hover-elevate" data-testid={`card-scholarship-${idx}`}>
-                  <CardContent className="pt-6 text-center">
-                    <div className="inline-flex p-3 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 mb-4">
-                      <Icon className="h-6 w-6 text-white" />
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <div className="mb-8">
+                <Badge variant="secondary" className="mb-4">Steps</Badge>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Admission Process</h2>
+              </div>
+              <div className="space-y-6">
+                {admissionProcess.map((item) => (
+                  <div key={item.step} className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                      {item.step}
                     </div>
-                    <h4 className="font-semibold mb-2">{scholarship.name}</h4>
-                    <p className="text-sm text-muted-foreground mb-2">{scholarship.criteria}</p>
-                    <Badge variant="secondary">{scholarship.benefit}</Badge>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                    <div>
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
+                      <p className="text-muted-foreground">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-8">
+                <Badge variant="secondary" className="mb-4">Checklist</Badge>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Required Documents</h2>
+              </div>
+              <Card>
+                <CardContent className="pt-6">
+                  <ul className="space-y-3">
+                    {requiredDocuments.map((doc, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{doc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16" data-testid="section-anti-ragging">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900 p-8 rounded-2xl">
+            <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">Anti-Ragging Policy</h2>
+            <p className="text-lg font-semibold mb-4">RAGGING IS STRICTLY PROHIBITED</p>
+            <p className="text-muted-foreground mb-6">
+              Ragging in any form is a criminal offense. Students found guilty will be expelled immediately and reported to the police.
+              All students must register at <a href="https://www.antiragging.in" target="_blank" rel="noreferrer" className="text-primary hover:underline">www.antiragging.in</a>.
+            </p>
+            <Button variant="destructive" asChild>
+              <a href="https://www.antiragging.in" target="_blank" rel="noreferrer">
+                Register Anti-Ragging Undertaking
+              </a>
+            </Button>
           </div>
         </div>
       </section>

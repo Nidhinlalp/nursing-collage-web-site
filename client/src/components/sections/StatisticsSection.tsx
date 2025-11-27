@@ -3,10 +3,10 @@ import { Users, Award, TrendingUp, Building2 } from 'lucide-react';
 import { useScrollAnimation, useCountUp } from '@/hooks/useScrollAnimation';
 
 const stats = [
-  { number: 500, unit: '+', label: 'Students', icon: Users, color: 'from-blue-500 to-blue-600' },
-  { number: 50, unit: '+', label: 'Faculty', icon: Award, color: 'from-teal-500 to-teal-600' },
-  { number: 100, unit: '%', label: 'Placements', icon: TrendingUp, color: 'from-green-500 to-green-600' },
-  { number: 10, unit: '+', label: 'Hospital Partners', icon: Building2, color: 'from-purple-500 to-purple-600' },
+  { number: 30, unit: '+', label: 'Annual Intake', icon: Users, color: 'from-blue-500 to-blue-600' },
+  { number: 5, unit: '+', label: 'Hospital Partners', icon: Building2, color: 'from-purple-500 to-purple-600' },
+  { number: 100, unit: '%', label: 'Clinical Training', icon: TrendingUp, color: 'from-green-500 to-green-600' },
+  { number: 50, unit: '+', label: 'Qualified Faculty', icon: Award, color: 'from-teal-500 to-teal-600' },
 ];
 
 function StatCard({ stat, index, isVisible }: { stat: typeof stats[0]; index: number; isVisible: boolean }) {
@@ -38,7 +38,7 @@ export default function StatisticsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="text-stats-title">
-            Our Impact in Numbers
+            Why Choose IETNC
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Decades of excellence in nursing education, producing healthcare professionals who make a difference.

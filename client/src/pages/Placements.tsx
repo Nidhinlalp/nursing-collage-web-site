@@ -16,18 +16,25 @@ import { useScrollAnimation, useCountUp } from '@/hooks/useScrollAnimation';
 import graduateImage from '@assets/generated_images/nursing_graduate_testimonial_photo.png';
 import alumniImage from '@assets/generated_images/male_nursing_alumni_photo.png';
 
-// todo: remove mock data
+
 const placementStats = [
-  { number: 100, unit: '%', label: 'Placement Rate', icon: TrendingUp },
-  { number: 50, unit: '+', label: 'Recruiting Partners', icon: Building2 },
-  { number: 6, unit: 'LPA', label: 'Highest Package', icon: IndianRupee },
-  { number: 3.5, unit: 'LPA', label: 'Average Package', icon: IndianRupee },
+  { number: 100, unit: '%', label: 'Placement Assistance', icon: TrendingUp },
+  { number: 50, unit: '+', label: 'Hospital Partners', icon: Building2 },
+  { number: 1000, unit: '+', label: 'Alumni Placed', icon: Users },
+  { number: 25, unit: '+', label: 'Years of Excellence', icon: Award },
 ];
 
 const recruiters = [
-  'Apollo Hospitals', 'Fortis Healthcare', 'Max Healthcare', 'Manipal Hospitals',
-  'KIMS', 'Narayana Health', 'Aster DM', 'Columbia Asia',
-  'AIIMS Delhi', 'CMC Vellore', 'NIMHANS', 'PGIMER',
+  'Apollo Hospitals',
+  'Fortis Healthcare',
+  'Aster Medcity',
+  'KIMS Health',
+  'Meitra Hospital',
+  'Moulana Hospital',
+  'Almas Hospital',
+  'Baby Memorial Hospital',
+  'MIMS',
+  'Lakeshore Hospital',
 ];
 
 const successStories = [

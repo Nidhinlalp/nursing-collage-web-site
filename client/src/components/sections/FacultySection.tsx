@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import facultyFemale from '@assets/generated_images/female_nursing_faculty_portrait.png';
+import principalImage from '/dr-vilasini.png';
 import facultyMale from '@assets/generated_images/male_doctor_faculty_portrait.png';
 import facultyNurse from '@assets/generated_images/young_female_nurse_portrait.png';
 
@@ -11,11 +11,11 @@ import facultyNurse from '@assets/generated_images/young_female_nurse_portrait.p
 const faculty = [
   {
     id: 1,
-    name: 'Dr. Priya Sharma',
+    name: 'Dr. Vilasini. C',
     role: 'Principal',
-    qualification: 'PhD in Nursing, MSc, BSc',
+    qualification: 'PhD in Nursing',
     experience: '25+ years',
-    image: facultyFemale,
+    image: principalImage,
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const faculty = [
     role: 'Clinical Instructor',
     qualification: 'MSc Nursing',
     experience: '12+ years',
-    image: facultyFemale,
+    image: facultyNurse,
   },
 ];
 

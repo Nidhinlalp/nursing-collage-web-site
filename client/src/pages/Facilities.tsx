@@ -21,61 +21,63 @@ import campusImage from '@assets/generated_images/college_campus_aerial_view.png
 
 const academicFacilities = [
   {
-    title: 'Nursing Skills Lab',
-    description: 'Equipped with mannequins and medical equipment for practical training',
+    title: 'Nursing Foundations Lab',
+    description: 'Equipped with advanced mannequins for fundamental nursing skills training',
     icon: Stethoscope,
-    features: ['Patient Simulators', 'IV Training Arms', 'CPR Mannequins', 'Wound Care Kits'],
+    features: ['Patient Simulators', 'CPR Mannequins', 'Wound Care Kits'],
   },
   {
-    title: 'Anatomy Lab',
-    description: 'Comprehensive anatomical models and specimens for study',
+    title: 'Community Health Nursing Lab',
+    description: 'Simulated community setting for public health training',
+    icon: Building2,
+    features: ['Home Visit Kits', 'Health Education Aids', 'Community Maps'],
+  },
+  {
+    title: 'Nutrition Lab',
+    description: 'Facilities for therapeutic diet preparation and nutrition education',
+    icon: Utensils,
+    features: ['Cooking Stations', 'Diet Charts', 'Food Models'],
+  },
+  {
+    title: 'OBG & Pediatrics Lab',
+    description: 'Specialized lab for maternal and child health nursing',
+    icon: BedDouble,
+    features: ['Birthing Simulators', 'Newborn Mannequins', 'Incubators'],
+  },
+  {
+    title: 'Pre-Clinical Science Lab',
+    description: 'Anatomy, Physiology, and Microbiology resources',
     icon: Microscope,
-    features: ['Skeletal Models', 'Organ Models', 'Microscopes', 'Histology Slides'],
-  },
-  {
-    title: 'Simulation Center',
-    description: 'Advanced simulation technology for realistic clinical scenarios',
-    icon: MonitorPlay,
-    features: ['High-Fidelity Simulators', 'Debriefing Rooms', 'Recording Systems', 'Virtual Reality Tools'],
+    features: ['Skeletal Models', 'Microscopes', 'Specimens'],
   },
   {
     title: 'Computer Lab',
     description: 'Modern computer facility with internet access',
     icon: Wifi,
-    features: ['50+ Workstations', 'High-Speed Internet', 'E-Learning Software', 'Digital Resources'],
+    features: ['Workstations', 'High-Speed Internet', 'E-Learning Resources'],
   },
   {
     title: 'Library',
-    description: 'Extensive collection of nursing and medical literature',
+    description: 'Comprehensive resource center for nursing education',
     icon: BookOpen,
-    features: ['10,000+ Books', 'Digital Journals', 'Reading Rooms', 'Research Databases'],
-  },
-  {
-    title: 'Research Lab',
-    description: 'Dedicated space for nursing research and projects',
-    icon: FlaskConical,
-    features: ['Research Equipment', 'Statistical Software', 'Presentation Facilities', 'Collaboration Spaces'],
+    features: ['3000+ Books', 'National & International Journals', 'E-Journals (Delnet)', 'Reading Room'],
   },
 ];
 
 const hostelFacilities = [
-  { title: 'Furnished Rooms', description: 'Comfortable twin-sharing rooms with study tables', icon: BedDouble },
-  { title: '24/7 Security', description: 'Round-the-clock security with CCTV surveillance', icon: ShieldCheck },
-  { title: 'Dining Hall', description: 'Nutritious vegetarian and non-vegetarian meals', icon: Utensils },
-  { title: 'Recreation Area', description: 'Indoor games, TV room, and common areas', icon: Dumbbell },
-  { title: 'Wi-Fi Enabled', description: 'High-speed internet throughout the campus', icon: Wifi },
-  { title: 'Transport', description: 'Regular bus service to clinical sites', icon: Bus },
+  { title: 'Secure Accommodation', description: 'Safe and secure hostel for female students', icon: ShieldCheck },
+  { title: 'Furnished Rooms', description: 'Comfortable rooms with study tables', icon: BedDouble },
+  { title: 'Dining Hall', description: 'Hygienic and nutritious meals', icon: Utensils },
+  { title: 'Recreation', description: 'Common areas for relaxation', icon: Dumbbell },
+  { title: 'Transport', description: 'College bus facility for clinicals and outings', icon: Bus },
 ];
 
 const clinicalPartners = [
-  'Apollo Hospitals',
-  'Fortis Healthcare',
-  'KIMS Hospital',
-  'Medical Trust Hospital',
-  'District General Hospital',
-  'Community Health Centers',
-  'Primary Health Centers',
-  'Specialty Clinics',
+  { name: 'Ithis Medicity', type: 'Parent Hospital', desc: '300 Bedded Super Specialty Hospital' },
+  { name: 'Govt Medical College, Manjeri', type: 'Affiliated', desc: 'Tertiary Care Center' },
+  { name: 'Govt General Hospital, Manjeri', type: 'Affiliated', desc: 'General Hospital' },
+  { name: 'Govt Taluk Hospital, Malappuram', type: 'Affiliated', desc: 'Secondary Care' },
+  { name: 'Govt Mental Health Center, Kuthiravattom', type: 'Affiliated', desc: 'Psychiatric Care' },
 ];
 
 export default function Facilities() {
@@ -103,30 +105,17 @@ export default function Facilities() {
           <Tabs defaultValue="academic" className="max-w-6xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger value="academic" className="gap-2" data-testid="tab-academic">
-                <FlaskConical className="h-4 w-4" /> Academic
+                <FlaskConical className="h-4 w-4" /> Academic & Labs
               </TabsTrigger>
               <TabsTrigger value="hostel" className="gap-2" data-testid="tab-hostel">
-                <Building2 className="h-4 w-4" /> Hostel & Campus
+                <Building2 className="h-4 w-4" /> Hostel & Transport
               </TabsTrigger>
               <TabsTrigger value="clinical" className="gap-2" data-testid="tab-clinical">
-                <Stethoscope className="h-4 w-4" /> Clinical Partners
+                <Stethoscope className="h-4 w-4" /> Clinical Facilities
               </TabsTrigger>
             </TabsList>
 
             <TabsContent value="academic" className="space-y-8">
-              <div className="relative h-64 md:h-80 rounded-xl overflow-hidden mb-8">
-                <img
-                  src={labImage}
-                  alt="Nursing Simulation Lab"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Advanced Simulation Center</h3>
-                  <p className="text-white/80">State-of-the-art training facilities</p>
-                </div>
-              </div>
-
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {academicFacilities.map((facility, idx) => {
                   const Icon = facility.icon;
@@ -159,9 +148,9 @@ export default function Facilities() {
             <TabsContent value="hostel" className="space-y-8">
               <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-accent/5">
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">Comfortable Student Accommodation</h3>
+                  <h3 className="text-2xl font-bold mb-2">Student Accommodation & Transport</h3>
                   <p className="text-muted-foreground max-w-2xl mx-auto">
-                    Our campus offers modern hostel facilities ensuring a safe and comfortable stay for students from across India.
+                    Ensuring a safe, comfortable, and convenient environment for our students.
                   </p>
                 </div>
 
@@ -181,12 +170,6 @@ export default function Facilities() {
                     );
                   })}
                 </div>
-
-                <div className="mt-8 text-center">
-                  <Badge variant="secondary" className="text-sm">
-                    Hostel Fee: ₹40,000 per year (inclusive of meals)
-                  </Badge>
-                </div>
               </Card>
             </TabsContent>
 
@@ -195,23 +178,21 @@ export default function Facilities() {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2">Clinical Training Partners</h3>
                   <p className="text-muted-foreground max-w-2xl mx-auto">
-                    We have partnerships with leading hospitals and healthcare facilities for comprehensive clinical exposure.
+                    Extensive clinical exposure through our parent hospital and affiliated government institutions.
                   </p>
                 </div>
 
-                <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {clinicalPartners.map((partner, idx) => (
                     <Card key={idx} className="p-4 text-center hover-elevate" data-testid={`card-partner-${idx}`}>
                       <Building2 className="h-8 w-8 mx-auto mb-2 text-primary" />
-                      <p className="font-medium text-sm">{partner}</p>
+                      <h4 className="font-bold text-lg mb-1">{partner.name}</h4>
+                      <Badge variant={partner.type === 'Parent Hospital' ? 'default' : 'outline'} className="mb-2">
+                        {partner.type}
+                      </Badge>
+                      <p className="text-sm text-muted-foreground">{partner.desc}</p>
                     </Card>
                   ))}
-                </div>
-
-                <div className="mt-8 p-4 bg-muted rounded-lg text-center">
-                  <p className="text-sm text-muted-foreground">
-                    Students complete 1000+ hours of clinical rotations across various departments including ICU, OT, Emergency, Pediatrics, and Community Health.
-                  </p>
                 </div>
               </Card>
             </TabsContent>

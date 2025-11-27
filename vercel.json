@@ -1,11 +1,32 @@
 {
-    "framework": "vite",
-    "buildCommand": "npm run build",
-    "outputDirectory": "dist/public",
-    "rewrites": [
+    "version": 2,
+    "builds": [
         {
-            "source": "/(.*)",
-            "destination": "/index.html"
+            "src": "dist/index.cjs",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "dist/public/**",
+            "use": "@vercel/static"
         }
-    ]
+    ],
+    "routes": [
+        {
+            "src": "/assets/(.*)",
+            "dest": "/assets/$1"
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/dist/index.cjs"
+        },
+        {
+            "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|json|xml|webp))",
+            "dest": "/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/dist/index.cjs"
+        }
+    ],
+    "outputDirectory": "dist/public"
 }

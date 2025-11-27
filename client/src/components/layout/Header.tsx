@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/programs', label: 'Programs' },
   { href: '/admissions', label: 'Admissions' },
   { href: '/facilities', label: 'Facilities' },
+  { href: '/faculty', label: 'Faculty' },
   { href: '/placements', label: 'Placements' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -43,10 +44,10 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a href="tel:+919876543210" className="hidden md:flex">
+            <a href="tel:+917902288866" className="hidden md:flex">
               <Button variant="outline" size="sm" className="gap-2" data-testid="button-call">
                 <Phone className="h-4 w-4" />
-                <span className="hidden xl:inline">+91 98765 43210</span>
+                <span className="hidden xl:inline">+91 7902288866</span>
               </Button>
             </a>
 

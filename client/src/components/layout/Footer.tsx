@@ -15,24 +15,18 @@ import {
 } from 'lucide-react';
 
 const quickLinks = [
+  { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
   { href: '/programs', label: 'Programs' },
   { href: '/admissions', label: 'Admissions' },
-  { href: '/facilities', label: 'Facilities' },
-  { href: '/placements', label: 'Placements' },
   { href: '/contact', label: 'Contact' },
 ];
 
-const programs = [
-  { href: '/programs/gnm', label: 'GNM Program' },
-  { href: '/programs/bsc', label: 'BSc Nursing' },
-];
-
 const resources = [
-  { href: '/student-portal', label: 'Student Portal' },
-  { href: '/library', label: 'E-Library' },
-  { href: '/careers', label: 'Careers' },
-  { href: '/alumni', label: 'Alumni Network' },
+  { href: '/downloads', label: 'Downloads' },
+  { href: '/news', label: 'News & Events' },
+  { href: '/policies', label: 'Policies' },
+  { href: '/terms', label: 'Terms & Conditions' },
 ];
 
 export default function Footer() {
@@ -45,7 +39,7 @@ export default function Footer() {
               <img src="/logo.png" alt="IETNC Logo" className="h-10 w-auto object-contain dark:brightness-0 dark:invert" />
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              ITHIS Medicity Nursing College - Shaping the future of healthcare through excellence in nursing education since 1999.
+              IET College of Nursing - Shaping the future of healthcare through excellence in nursing education.
             </p>
             <div className="flex gap-2">
               {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, idx) => (
@@ -70,17 +64,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Programs</h4>
-            <ul className="space-y-2">
-              {programs.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h4 className="font-semibold text-foreground mb-4 mt-6">Resources</h4>
+            <h4 className="font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-2">
               {resources.map((link) => (
                 <li key={link.href}>
@@ -97,15 +81,15 @@ export default function Footer() {
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">ITHIS Medicity Campus, NH Road, Kerala, India - 682001</span>
+                <span className="text-muted-foreground">IET College of Nursing, Malappuram - 676519</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <a href="tel:+919876543210" className="text-muted-foreground hover:text-foreground">+91 98765 43210</a>
+                <a href="tel:+917902288866" className="text-muted-foreground hover:text-foreground">+91 7902288866</a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                <a href="mailto:info@ietnc.com" className="text-muted-foreground hover:text-foreground">info@ietnc.com</a>
+                <a href="mailto:ietcollegeofnursing@gmail.com" className="text-muted-foreground hover:text-foreground">ietcollegeofnursing@gmail.com</a>
               </li>
             </ul>
 
@@ -127,11 +111,10 @@ export default function Footer() {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p data-testid="text-copyright">© 2025 IETNC - ITHIS Medicity Nursing College. All rights reserved.</p>
+          <p data-testid="text-copyright">© 2025 IET College of Nursing. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
+            <Link href="/policies" className="hover:text-foreground">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-foreground">Terms of Service</Link>
-            <Link href="/sitemap" className="hover:text-foreground">Sitemap</Link>
           </div>
         </div>
       </div>

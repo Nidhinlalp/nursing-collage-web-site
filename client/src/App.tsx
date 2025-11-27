@@ -13,6 +13,11 @@ import Admissions from "@/pages/Admissions";
 import Facilities from "@/pages/Facilities";
 import Placements from "@/pages/Placements";
 import Contact from "@/pages/Contact";
+import Faculty from "@/pages/Faculty";
+import Policies from "@/pages/Policies";
+import Downloads from "@/pages/Downloads";
+import News from "@/pages/News";
+import Terms from "@/pages/Terms";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +31,11 @@ function Router() {
       <Route path="/facilities" component={Facilities} />
       <Route path="/placements" component={Placements} />
       <Route path="/contact" component={Contact} />
+      <Route path="/faculty" component={Faculty} />
+      <Route path="/policies" component={Policies} />
+      <Route path="/downloads" component={Downloads} />
+      <Route path="/news" component={News} />
+      <Route path="/terms" component={Terms} />
       <Route component={NotFound} />
     </Switch>
   );

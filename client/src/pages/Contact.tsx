@@ -20,10 +20,10 @@ import {
 import { useToast } from '@/hooks/use-toast';
 
 const departments = [
-  { name: 'Admissions Office', phone: '+91 98765 43210', email: 'admissions@ietnc.com', icon: User },
-  { name: 'Academic Affairs', phone: '+91 98765 43211', email: 'academics@ietnc.com', icon: Building },
-  { name: 'Student Services', phone: '+91 98765 43212', email: 'students@ietnc.com', icon: Headphones },
-  { name: 'Principal Office', phone: '+91 98765 43213', email: 'principal@ietnc.com', icon: User },
+  { name: 'Admissions Office', phone: '+91 7902288866', email: 'ietcollegeofnursing@gmail.com', icon: User },
+  { name: 'Principal Office', phone: '+91 7902288899', email: 'ietcollegeofnursing@gmail.com', icon: Building },
+  { name: 'General Inquiry', phone: '+91 7902288866', email: 'ietcollegeofnursing@gmail.com', icon: Headphones },
+  { name: 'Administration', phone: '+91 7902288899', email: 'ietcollegeofnursing@gmail.com', icon: User },
 ];
 
 export default function Contact() {
@@ -84,9 +84,10 @@ export default function Contact() {
                     <div>
                       <h4 className="font-semibold">Address</h4>
                       <p className="text-muted-foreground text-sm">
-                        ITHIS Medicity Nursing College<br />
-                        NH Road, Near Medical College<br />
-                        Kerala, India - 682001
+                        IET College of Nursing<br />
+                        Ithis Medicity Institute of Higher Education & Research<br />
+                        Near Inkel City, Oorakam Melmuri, Panakkad PO<br />
+                        Malappuram – 676519, Kerala, India
                       </p>
                     </div>
                   </div>
@@ -98,8 +99,8 @@ export default function Contact() {
                     <div>
                       <h4 className="font-semibold">Phone</h4>
                       <p className="text-muted-foreground text-sm">
-                        <a href="tel:+919876543210" className="hover:text-primary">+91 98765 43210</a><br />
-                        <a href="tel:+919876543211" className="hover:text-primary">+91 98765 43211</a>
+                        <a href="tel:+917902288866" className="hover:text-primary">+91 7902288866</a><br />
+                        <a href="tel:+917902288899" className="hover:text-primary">+91 7902288899</a>
                       </p>
                     </div>
                   </div>
@@ -111,8 +112,7 @@ export default function Contact() {
                     <div>
                       <h4 className="font-semibold">Email</h4>
                       <p className="text-muted-foreground text-sm">
-                        <a href="mailto:info@ietnc.com" className="hover:text-primary">info@ietnc.com</a><br />
-                        <a href="mailto:admissions@ietnc.com" className="hover:text-primary">admissions@ietnc.com</a>
+                        <a href="mailto:ietcollegeofnursing@gmail.com" className="hover:text-primary">ietcollegeofnursing@gmail.com</a>
                       </p>
                     </div>
                   </div>

@@ -3,10 +3,10 @@ import { Bell, Calendar, Trophy, BookOpen } from 'lucide-react';
 
 // todo: remove mock data
 const newsItems = [
-  { id: 1, icon: Bell, text: 'Admissions Open for 2025-26 Academic Year', type: 'Announcement' },
-  { id: 2, icon: Trophy, text: 'Our Students Win State-Level Nursing Competition', type: 'Achievement' },
-  { id: 3, icon: Calendar, text: 'Free Health Camp on December 15th', type: 'Event' },
-  { id: 4, icon: BookOpen, text: 'New Advanced Simulation Lab Inaugurated', type: 'News' },
+  { id: 1, icon: Bell, text: 'IMPORTANT: Management Quota Application Deadline: 26/11/2025 at 4:00 PM', type: 'CRITICAL' },
+  { id: 2, icon: Bell, text: 'Admissions Open for 2025-26 Academic Year', type: 'Announcement' },
+  { id: 3, icon: Trophy, text: 'Our Students Win State-Level Nursing Competition', type: 'Achievement' },
+  { id: 4, icon: Calendar, text: 'Free Health Camp on December 15th', type: 'Event' },
 ];
 
 export default function NewsTicker() {
