@@ -42,13 +42,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
-                <span className="text-lg font-bold text-white">IE</span>
-              </div>
-              <div>
-                <span className="text-lg font-bold text-foreground">IETNC</span>
-                <p className="text-xs text-muted-foreground">Nursing College</p>
-              </div>
+              <img src="/logo.png" alt="IETNC Logo" className="h-10 w-auto object-contain dark:brightness-0 dark:invert" />
             </div>
             <p className="text-muted-foreground text-sm mb-4">
               ITHIS Medicity Nursing College - Shaping the future of healthcare through excellence in nursing education since 1999.
